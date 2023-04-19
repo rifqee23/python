@@ -1,0 +1,37 @@
+print("=== KALKULATOR DUO ===")
+print("1. Penjumlahan")
+print("2. Pengurangan")
+print("3. Perkalian")
+print("4. Pembagian")
+print("X. Keluar")
+
+while True:
+    op = input("Pilih opsi : ")
+
+    if op == 'X':
+        print("Terima Kasih. Sudah Menggunakan Kalkulator Duo")
+        break
+
+    if op not in ['1', '2', '3', '4']:
+        print("PILIHAN INVALID")
+
+    while True:
+        a = int(input("Masukkan angka pertama: "))
+        b = int(input("Masukkan angka kedua: "))
+
+        if op == '1':
+            hasil = a + b
+        elif op == '2':
+            hasil = a - b
+        elif op == '3':
+            hasil = a * b
+        elif op == '4':
+            hasil = a / b
+
+        print("Hasil =", hasil)
+
+        ulang = input("Anda ingin menghitung lagi? (Y/T) : ")
+        if ulang == 'T':
+            break
+        elif ulang == 'Y':
+            continue
